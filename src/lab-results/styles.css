@@ -1,0 +1,264 @@
+body {
+    font-family: 'Karma', serif;
+    margin: 0;
+    padding: 0;
+}
+
+.dashboard {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #2D336B;
+    color: #FFF2F2;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo-img {
+    width: 80px;
+    height: 80px;
+}
+
+nav {
+    flex-grow: 1;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    padding: 10px 20px;
+}
+
+nav ul li a {
+    color: #FFF2F2;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+nav ul li a:hover, nav ul li a.active {
+    color: #A9B5DF;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    margin-top: auto;
+}
+
+.user-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.user-info span {
+    margin-right: 10px;
+    color: #FFF2F2;
+}
+
+.logout {
+    color: #FFF2F2;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+h1 {
+    text-align: left;
+    color: #2D336B;
+    font-size: 24px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.search-bar {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+}
+
+#searchInput {
+    width: 100%;
+    padding: 10px 40px 10px 10px;
+    border: 1px solid #A9B5DF;
+    border-radius: 20px;
+    color: #2D336B;
+    font-family: 'Karma', serif;
+}
+
+#searchInput::placeholder {
+    color: #A9B5DF;
+}
+
+#clearSearchBtn {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #A9B5DF;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.table-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.select-btn button {
+    background-color: #2D336B;
+    color: #FFF2F2;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.select-btn button:hover {
+    background-color: #A9B5DF;
+}
+
+#lab-results-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+#lab-results-table th, #lab-results-table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #A9B5DF;
+    color: #2D336B;
+}
+
+#lab-results-table th {
+    background-color: #FFF2F2;
+    color: #2D336B;
+    font-weight: 500;
+}
+
+#lab-results-table td {
+    background-color: #FFF2F2;
+}
+
+#lab-results-table tbody tr:hover {
+    background-color: #A9B5DF;
+    color: #FFF2F2;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: #2D336B;
+}
+
+.pagination button {
+    background-color: #A9B5DF;
+    color: #FFF2F2;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.pagination button:disabled {
+    background-color: #e0dcdc;
+    cursor: not-allowed;
+}
+
+.pagination button:hover:not(:disabled) {
+    background-color: #2D336B;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #FFFFFF;
+    padding: 20px;
+    border-radius: 10px;
+    width: 500px;
+    max-height: 80vh;
+    overflow-y: auto;
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #2D336B;
+}
+
+.modal h2 {
+    color: #2D336B;
+    margin-bottom: 20px;
+}
+
+.patient-details-content h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #2D336B;
+}
+
+#labResultsTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 15px;
+}
+
+#labResultsTable th, #labResultsTable td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #A9B5DF;
+    color: #2D336B;
+}
+
+#labResultsTable th {
+    background-color: #FFF2F2;
+    font-weight: 500;
+}

@@ -1,0 +1,246 @@
+body {
+    font-family: 'Karma', serif;
+    margin: 0;
+    padding: 0;
+}
+
+.dashboard {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #2D336B;
+    color: #FFF2F2;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo-img {
+    width: 80px;
+    height: 80px;
+}
+
+nav {
+    flex-grow: 1; /* Push navigation up and let it take available space */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0; /* Remove default margin to push list up */
+}
+
+nav ul li {
+    padding: 10px 20px;
+}
+
+nav ul li a {
+    color: #FFF2F2;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+nav ul li a:hover, nav ul li a.active {
+    color: #A9B5DF;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    margin-top: auto; /* Keep John Doe at the bottom */
+}
+
+.user-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.user-info span {
+    margin-right: 10px;
+    color: #FFF2F2;
+}
+
+.logout {
+    color: #FFF2F2;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+h1 {
+    text-align: left;
+    color: #2D336B;
+    font-size: 24px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.patient-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FFF2F2;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.patient-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.patient-avatar {
+    flex-shrink: 0;
+}
+
+.avatar-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.patient-details h2, .patient-details h3 {
+    color: #2D336B;
+    margin: 0 0 10px 0;
+}
+
+.patient-details p {
+    color: #2D336B;
+    margin: 5px 0;
+}
+
+.add-btn {
+    background-color: #2D336B;
+    color: #FFF2F2;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    align-self: flex-start;
+}
+
+.add-btn:hover {
+    background-color: #A9B5DF;
+}
+
+.prescription-history {
+    background-color: #FFF2F2;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.prescription-history h2 {
+    color: #2D336B;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+#prescription-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+#prescription-table th, #prescription-table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #A9B5DF;
+    color: #2D336B;
+}
+
+#prescription-table th {
+    background-color: #FFF2F2;
+    color: #2D336B;
+    font-weight: 500;
+}
+
+#prescription-table td {
+    background-color: #FFF2F2;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #FFF2F2;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #2D336B;
+}
+
+.modal h2 {
+    color: #2D336B;
+    margin-bottom: 20px;
+}
+
+.modal label {
+    display: block;
+    margin-bottom: 5px;
+    color: #2D336B;
+}
+
+.modal input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #A9B5DF;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.submit-btn {
+    background-color: #A9B5DF;
+    color: #FFF2F2;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: #2D336B;
+}

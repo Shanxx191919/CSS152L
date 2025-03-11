@@ -1,0 +1,187 @@
+body {
+    font-family: 'Karma', serif;
+    margin: 0;
+    padding: 0;
+}
+
+.dashboard {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #2D336B;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.logo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo-img {
+    width: 80px;
+    height: 80px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    padding: 10px 20px;
+}
+
+nav ul li a {
+    color: #FFF2F2;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+nav ul li a:hover {
+    color: #A9B5DF;
+}
+
+nav ul li a:hover, nav ul li a.active {
+    color: #A9B5DF;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    margin-top: auto;
+}
+
+.user-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.user-info span {
+    margin-right: 10px;
+    color: #FFF2F2;
+}
+
+.logout {
+    color: #FFF2F2;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #2D336B;
+    font-size: 24px;
+}
+
+.content {
+    display: flex;
+    gap: 20px;
+    height: calc(100% - 60px); 
+}
+
+.schedule, .appointments, .prescription {
+    background-color: #A9B5DF;
+    border-radius: 10px;
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 400px; 
+}
+
+.schedule h2, .appointments h2, .prescription h2 {
+    margin-top: 0;
+    color: #2D336B;
+}
+
+.schedule-content {
+    flex: 1;
+    background-color: #FFF2F2;
+    border: 2px solid #A9B5DF;
+    border-radius: 5px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; 
+}
+
+.calendar-img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; 
+}
+
+.appointments table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.appointments th, .appointments td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #FFF2F2;
+    color: #2D336B;
+}
+
+.appointments th {
+    background-color: #FFF2F2;
+}
+
+.appointments tr:last-child td {
+    border-bottom: none;
+}
+
+.prescription .textarea-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.prescription textarea {
+    width: 90%; 
+    height: 90%;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    resize: none;
+    background-color: #FFF2F2;
+    color: #2D336B;
+}
+
+.print-btn {
+    background-color: #FFF2F2;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #2D336B;
+    cursor: pointer;
+    margin-top: 10px;
+    align-self: flex-end;
+}
+
+.print-btn:hover {
+    background-color: #e0dcdc;
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedDash | Laboratory Results</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Karma:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard">
+        <aside class="sidebar">
+            <div class="logo">
+                <img src="/src/assets/1ca7b9e5-5304-4804-b188-b3c8da479685.jpg" alt="MedDash Logo" class="logo-img">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="/src/dashboard/dashboard.html">Home</a></li>
+                    <li><a href="/src/appointment-management/appointment-management.html">Appointment Management</a></li>
+                    <li><a href="/src/prescription-management/prescription-management.html">Prescription Management</a></li>
+                    <li><a href="/src/patient-records/patient-records.html">Patient Records</a></li>
+                    <li><a href="/src/lab-results/lab-results.html" class="active">Laboratory Results</a></li>
+                    <li><a href="/src/billing/billing.html">Billing</a></li>
+                </ul>
+            </nav>
+            <div class="user-info">
+                <img src="/src/assets/360_F_289595573_wCKO1nxxx7HGk69z5szjvSOqPnZVTfTG.jpg" alt="User Icon" class="user-icon">
+                <span>John Doe</span>
+                <a href="/src/login/login.html" class="logout">→</a>
+            </div>
+        </aside>
+        <main class="main-content">
+            <header>
+                <h1>Laboratory Results</h1>
+            </header>
+            <div class="content">
+                <div class="search-bar">
+                    <input type="text" id="searchInput" placeholder="Search Patient Name or ID">
+                    <button id="clearSearchBtn">×</button>
+                </div>
+                <div class="table-controls">
+                    <div class="select-btn">
+                        <button>Select</button>
+                    </div>
+                </div>
+                <table id="lab-results-table">
+                    <thead>
+                        <tr>
+                            <th>Patient ID</th>
+                            <th>Name</th>
+                            <th>Test Name</th>
+                            <th>Test Date</th>
+                            <th>Result</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Rows will be dynamically rendered by JavaScript -->
+                    </tbody>
+                </table>
+                <div class="pagination">
+                    <button id="prevPageBtn" disabled>⟐</button>
+                    <span>Page <span id="currentPage">1</span> of <span id="totalPages">4</span></span>
+                    <button id="nextPageBtn">⟐</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Modal for Lab Result Details -->
+    <div id="labResultDetailsModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="labResultCloseBtn">×</span>
+            <h2>Lab Result Details</h2>
+            <div class="patient-details-content">
+                <h3>Patient Information</h3>
+                <p><strong>Patient ID:</strong> <span id="detailPatientId"></span></p>
+                <p><strong>Name:</strong> <span id="detailName"></span></p>
+                <h3>Lab Results</h3>
+                <table id="labResultsTable">
+                    <thead>
+                        <tr>
+                            <th>Test Name</th>
+                            <th>Test Date</th>
+                            <th>Result</th>
+                        </tr>
+                    </thead>
+                    <tbody id="labResultsBody">
+                        <!-- Lab results will be dynamically added -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedDash | Appointments</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Karma:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard">
+        <aside class="sidebar">
+            <div class="logo">
+                <img src="/src/assets/1ca7b9e5-5304-4804-b188-b3c8da479685.jpg" alt="MedDash Logo" class="logo-img">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="/src/dashboard/dashboard.html">Home</a></li>
+                    <li><a href="#" class="active">Appointment Management</a></li>
+                    <li><a href="/src/prescription-management/prescription-management.html">Prescription Management</a></li>
+                    <li><a href="/src/patient-records/patient-records.html">Patient Records</a></li>
+                    <li><a href="/src/lab-results/lab-results.html">Laboratory Results</a></li>
+                    <li><a href="/src/billing/billing.html">Billing</a></li>
+                </ul>
+            </nav>
+            <div class="user-info">
+                <img src="/src/assets/360_F_289595573_wCKO1nxxx7HGk69z5szjvSOqPnZVTfTG.jpg" alt="User Icon" class="user-icon">
+                <span>John Doe</span>
+                <a href="/src/login/login.html" class="logout">→</a>
+            </div>
+        </aside>
+        <main class="main-content">
+            <header>
+                <h1>Appointments Management</h1>
+            </header>
+            <div class="content">
+                <table id="appointments-table">
+                    <thead>
+                        <tr>
+                            <th>Patient's Name</th>
+                            <th>Service</th>
+                            <th>Schedule</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="patient-icon">A</span> Patient Zero</td>
+                            <td>General Medicine</td>
+                            <td>Jun 10, 2024 9:41 AM</td>
+                            <td>
+                                <button class="action-btn edit-btn">Edit</button>
+                                <button class="action-btn cancel-btn">Cancel</button>
+                                <button class="action-btn done-btn">Done</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="patient-icon">A</span> Patient One</td>
+                            <td>General Medicine</td>
+                            <td>Jun 10, 2024 9:41 AM</td>
+                            <td>
+                                <button class="action-btn edit-btn">Edit</button>
+                                <button class="action-btn cancel-btn">Cancel</button>
+                                <button class="action-btn done-btn">Done</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="patient-icon">A</span> Patient Two</td>
+                            <td>General Medicine</td>
+                            <td>Jun 10, 2024 9:41 AM</td>
+                            <td>
+                                <button class="action-btn edit-btn">Edit</button>
+                                <button class="action-btn cancel-btn">Cancel</button>
+                                <button class="action-btn done-btn">Done</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="patient-icon">A</span> Patient Three</td>
+                            <td>General Medicine</td>
+                            <td>Jun 10, 2024 9:41 AM</td>
+                            <td>
+                                <button class="action-btn edit-btn">Edit</button>
+                                <button class="action-btn cancel-btn">Cancel</button>
+                                <button class="action-btn done-btn">Done</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="patient-icon">A</span> Patient Four</td>
+                            <td>General Medicine</td>
+                            <td>Jun 10, 2024 9:41 AM</td>
+                            <td>
+                                <button class="action-btn edit-btn">Edit</button>
+                                <button class="action-btn cancel-btn">Cancel</button>
+                                <button class="action-btn done-btn">Done</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="patient-icon">A</span> Patient Five</td>
+                            <td>General Medicine</td>
+                            <td>Jun 10, 2024 9:41 AM</td>
+                            <td>
+                                <button class="action-btn edit-btn">Edit</button>
+                                <button class="action-btn cancel-btn">Cancel</button>
+                                <button class="action-btn done-btn">Done</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="patient-icon">A</span> Patient Six</td>
+                            <td>General Medicine</td>
+                            <td>Jun 10, 2024 9:41 AM</td>
+                            <td>
+                                <button class="action-btn edit-btn">Edit</button>
+                                <button class="action-btn cancel-btn">Cancel</button>
+                                <button class="action-btn done-btn">Done</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button class="add-btn">+ Add Appointment</button>
+
+                <!-- Container for Cancelled and Done Appointments -->
+                <div class="secondary-tables">
+                    <div class="table-container">
+                        <h2>Cancelled Appointments</h2>
+                        <table id="cancelled-appointments-table">
+                            <thead>
+                                <tr>
+                                    <th>Patient's Name</th>
+                                    <th>Service</th>
+                                    <th>Schedule</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Cancelled appointments will be added here -->
+                                <td><span class="patient-icon">A</span> Patient Zero</td>
+                                <td>General Medicine</td>
+                                <td>Jun 10, 2024 9:41 AM</td>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="table-container">
+                        <h2>Finished Appointments</h2>
+                        <table id="done-appointments-table">
+                            <thead>
+                                <tr>
+                                    <th>Patient's Name</th>
+                                    <th>Service</th>
+                                    <th>Schedule</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Done appointments will be added here -->
+                                <td><span class="patient-icon">A</span> Patient Zero</td>
+                                <td>General Medicine</td>
+                                <td>Jun 10, 2024 9:41 AM</td>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Modal for Add Appointment -->
+    <div id="addAppointmentModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">×</span>
+            <h2>Add New Appointment</h2>
+            <form id="appointmentForm">
+                <label for="patientName">Patient's Name:</label>
+                <input type="text" id="patientName" required>
+                <label for="service">Service:</label>
+                <input type="text" id="service" required>
+                <label for="schedule">Schedule:</label>
+                <input type="datetime-local" id="schedule" required>
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal for Edit Appointment -->
+    <div id="editAppointmentModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">×</span>
+            <h2>Edit Appointment</h2>
+            <form id="editAppointmentForm">
+                <label for="editSchedule">Schedule:</label>
+                <input type="datetime-local" id="editSchedule" required>
+                <button type="submit" class="submit-btn">Update</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal for Cancel Confirmation -->
+    <div id="cancelAppointmentModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">×</span>
+            <h2>Cancel Appointment</h2>
+            <p>Are you sure you want to cancel this appointment for <span id="cancelPatientName"></span>?</p>
+            <div class="modal-buttons">
+                <button id="confirmCancelBtn" class="submit-btn">Yes, Cancel</button>
+                <button id="closeCancelModalBtn" class="cancel-modal-btn">No</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

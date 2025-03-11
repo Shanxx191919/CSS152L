@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedDash | Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Karma:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard">
+        <aside class="sidebar">
+            <div class="logo">
+                <img src="/src/assets/1ca7b9e5-5304-4804-b188-b3c8da479685.jpg" alt="MedDash Logo" class="logo-img">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="dashboard.html" class="active">Home</a></li>
+                    <li><a href="/src/appointment-management/appointment-management.html">Appointment Management</a></li>
+                    <li><a href="/src/prescription-management/prescription-management.html">Prescription Management</a></li>
+                    <li><a href="/src/patient-records/patient-records.html">Patient Records</a></li>
+                    <li><a href="/src/lab-results/lab-results.html">Laboratory Results</a></li>
+                    <li><a href="/src/billing/billing.html">Billing</a></li>
+                </ul>
+            </nav>
+            <div class="user-info">
+                <img src="/src/assets/360_F_289595573_wCKO1nxxx7HGk69z5szjvSOqPnZVTfTG.jpg" alt="User Icon" class="user-icon">
+                <span>John Doe</span>
+                <a href="/src/login/login.html" class="logout">→</a>
+            </div>
+        </aside>
+        <main class="main-content">
+            <header>
+                <h1>Welcome to your Dashboard</h1>
+            </header>
+            <div class="content">
+                <section class="schedule">
+                    <h2>Your Schedule</h2>
+                    <div class="schedule-content">
+                        <img src="/src/assets/Printable-March-2025-Calendar-Style-26-1024x791.jpg" alt="March 2025 Calendar" class="calendar-img">
+                    </div>
+                </section>
+                <section class="appointments">
+                    <h2>Appointments</h2>
+                    <table id="appointments-table">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Date and Time</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>John Smith</td><td>2025-03-11 10:00 AM</td></tr>
+                            <tr><td>Jane Doe</td><td>2025-03-12 02:00 PM</td></tr>
+                            <tr><td>Mike Johnson</td><td>2025-03-13 09:00 AM</td></tr>
+                            <tr><td>Sarah Lee</td><td>2025-03-14 11:00 AM</td></tr>
+                            <tr><td>Robert Brown</td><td>2025-03-15 01:00 PM</td></tr>
+                            <tr><td>Emily Davis</td><td>2025-03-16 03:00 PM</td></tr>
+                            <tr><td>John Smith</td><td>2025-03-11 10:00 AM</td></tr>
+                            <tr><td>Jane Doe</td><td>2025-03-12 02:00 PM</td></tr>
+                            <tr><td>Mike Johnson</td><td>2025-03-13 09:00 AM</td></tr>
+                            <tr><td>Sarah Lee</td><td>2025-03-14 11:00 AM</td></tr>
+                            <tr><td>Robert Brown</td><td>2025-03-15 01:00 PM</td></tr>
+                            <tr><td>Emily Davis</td><td>2025-03-16 03:00 PM</td></tr>
+                            <tr><td>Emily Davis</td><td>2025-03-16 03:00 PM</td></tr>
+                        </tbody>
+                    </table>
+                </section>
+                <section class="prescription">
+                    <h2>RX</h2>
+                    <div class="textarea-container">
+                        <textarea placeholder="Type here..."></textarea>
+                    </div>
+                    <button class="print-btn">Print</button>
+                </section>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</head>
+</body>
+</html>

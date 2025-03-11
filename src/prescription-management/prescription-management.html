@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedDash | Prescription Management</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Karma:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard">
+        <aside class="sidebar">
+            <div class="logo">
+                <img src="/src/assets/1ca7b9e5-5304-4804-b188-b3c8da479685.jpg" alt="MedDash Logo" class="logo-img">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="/src/dashboard/dashboard.html">Home</a></li>
+                    <li><a href="/src/appointment-management/appointment-management.html">Appointment Management</a></li>
+                    <li><a href="/src/prescription-management/prescription-management.html" class="active">Prescription Management</a></li>
+                    <li><a href="/src/patient-records/patient-records.html">Patient Records</a></li>
+                    <li><a href="/src/lab-results/lab-results.html">Laboratory Results</a></li>
+                    <li><a href="/src/billing/billing.html">Billing</a></li>
+                </ul>
+            </nav>
+            <div class="user-info">
+                <img src="/src/assets/360_F_289595573_wCKO1nxxx7HGk69z5szjvSOqPnZVTfTG.jpg" alt="User Icon" class="user-icon">
+                <span>John Doe</span>
+                <a href="/src/login/login.html" class="logout">→</a>
+            </div>
+        </aside>
+        <main class="main-content">
+            <header>
+                <h1>Prescription Management</h1>
+            </header>
+            <div class="content">
+                <div class="patient-section">
+                    <div class="patient-info">
+                        <div class="patient-avatar">
+                            <img src="/src/assets/360_F_289595573_wCKO1nxxx7HGk69z5szjvSOqPnZVTfTG.jpg" alt="Patient Avatar" class="avatar-img">
+                        </div>
+                        <div class="patient-details">
+                            <h2>Patient Information</h2>
+                            <p>Patient ID: 1234567</p>
+                            <p>Patient Name: John Doe</p>
+                            <h3>Medical History</h3>
+                            <p>Hep A and B</p>
+                        </div>
+                    </div>
+                    <button class="add-btn">+ Add Prescription</button>
+                </div>
+                <div class="prescription-history">
+                    <h2>Prescription History</h2>
+                    <table id="prescription-table">
+                        <thead>
+                            <tr>
+                                <th>Drug Name</th>
+                                <th>Prescribed Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Sodium Divalproex</td>
+                                <td>Jun 10, 2024 9:41 AM</td>
+                            </tr>
+                            <tr>
+                                <td>Olanzapine</td>
+                                <td>Jun 10, 2024 9:41 AM</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Modal for Add Prescription -->
+    <div id="addPrescriptionModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">×</span>
+            <h2>Add New Prescription</h2>
+            <form id="prescriptionForm">
+                <label for="drugName">Drug Name:</label>
+                <input type="text" id="drugName" required>
+                <label for="prescribedDate">Prescribed Date:</label>
+                <input type="datetime-local" id="prescribedDate" required>
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
